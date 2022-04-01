@@ -13,6 +13,7 @@
 
 - 余：Typescript/ECMAScriptの新しい記法についても学習したい。
    - https://webmanab-html.com/tip/javascript-es6/
+   - Q. Rubyなど、既存の別言語で作成したアプリに上記の仕組みを載せることはできるのか？
 
 ## 構成
 

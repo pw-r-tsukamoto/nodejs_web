@@ -10,6 +10,10 @@
   - 3. jQueryとの関係を説明すること
   - 4. jQueryよりも簡単に書けて、かつ今後しばらくは利用できる「Jsを簡単に扱う方法」は何なのかを結論付ける
 
+
+- 余：Typescript/ECMAScriptの新しい記法についても学習したい。
+   - https://webmanab-html.com/tip/javascript-es6/
+
 ## 構成
 
 - Node.js

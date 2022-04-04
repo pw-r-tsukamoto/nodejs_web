@@ -13,5 +13,5 @@ https://medium.com/@JedaiSaboteur/creating-a-react-app-from-scratch-f3c693b84658
 
 
 - `yarn run webpack-dev-server --mode development`で実行できるとあったが、、、
-  - Nodeのバージョンが新しすぎるせいで起動できなかった。
+  - Nodeのバージョンが新しすぎるせいで起動できなかった。ここで詰まって以降は進めていない。
   - https://github.com/vercel/next.js/issues/30078

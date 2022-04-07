@@ -13,6 +13,21 @@ function readFile(file, response) {
     });
 }
 
+// 以下のように、cgi風にnode.jsを作成することもできる
+const readerhtml = `
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>TEST-02</title>
+    <link rel="stylesheet" href="/css/style.css">
+  </head>
+  <body>
+    <h1>It is page!</h1>
+    <p>page, page, page</p>
+  </body>
+</html>
+`;
+
 // リクエストはpublicを除いたディレクトリ、読み込みはpublicを含めたディレクトリにした（Reactなどで使われている一般的な構成に近いため）
 const app = http.createServer((request, response) => {
     if (request.url === "/" && request.method === "GET") {
@@ -31,6 +46,12 @@ const app = http.createServer((request, response) => {
         });
         readFile("public/css/style.css", response);
         
+    } else if (request.url === "/page.html" && request.method === "GET") {
+        response.writeHead(200, {
+            "Content-Type": "text/html"
+        });
+        response.end(readerhtml);
+       
     } else if (request.url === "/js/script.js" && request.method === "GET") {
         response.writeHead(200, {
             "Content-Type": "text/javascript"
@@ -41,7 +62,7 @@ const app = http.createServer((request, response) => {
             "Content-Type": "text/html"
         });
         response.end(`Not found : ${request.url}`);
-        console.log();
+        console.log(`ページが読み込めていないか、または存在しません`);
     }
 });
 
